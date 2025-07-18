@@ -1,0 +1,4 @@
+/.vs
+/src/BracketWatch.Services/obj
+**/bin
+**/obj
