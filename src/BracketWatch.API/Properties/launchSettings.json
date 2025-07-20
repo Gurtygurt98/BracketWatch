@@ -6,16 +6,17 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "dotnetRunMessages": true,
-      "applicationUrl": "http://localhost:5288"
+      "applicationUrl": "http://localhost:3950"
     },
     "https": {
-      "commandName": "Project",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "dotnetRunMessages": true,
-      "applicationUrl": "https://localhost:7254;http://localhost:5288",
-      "sqlDebugging": true
+        "commandName": "Project",
+        "environmentVariables": {
+            "ASPNETCORE_ENVIRONMENT": "Development"
+        },
+        "dotnetRunMessages": true,
+        "applicationUrl": "http://localhost:3950;https://localhost:3951",
+
+        "sqlDebugging": true
     }
   },
   "$schema": "https://json.schemastore.org/launchsettings.json"
