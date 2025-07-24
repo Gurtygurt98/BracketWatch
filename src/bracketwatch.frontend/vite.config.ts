@@ -1,13 +1,17 @@
+// vite.config.ts
 import { defineConfig } from 'vite';
-import plugin from '@vitejs/plugin-vue';
+import vue from '@vitejs/plugin-vue';
+import { fileURLToPath, URL } from 'node:url';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [plugin()],
-    server: {
-      port: 54582,
-      proxy: {
-        '/api': 'http://localhost:3951'
-      }
-    }
-})
+  plugins: [vue()],
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
+  },
+  server: {
+    port: 54582,
+    proxy: { '/api': 'http://localhost:3951' },
+  },
+});

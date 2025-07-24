@@ -1,9 +1,23 @@
 <template>
   <div>
-    <button @click="loadPowerRankings"> Load Rankings </button>
+    <button @click="onLoad">Load Rankings</button>
     <ul>
-      <li v-for="team in rankings" :key="team.rank">{{team.name}}</li>
+      <li v-for="r in rankings" :key="r.rank">
+        {{ r.team.name }} <!-- your DTO has team.name -->
+      </li>
     </ul>
   </div>
 </template>
-import {getPowerRankings} from '../services/'
+
+<script setup lang="ts">
+import { ref } from 'vue';
+import { loadPowerRankings } from '@/services/powerRankingServices';
+
+import type { PowerRankingDto } from '@/models/ApiClient';
+
+const rankings = ref<PowerRankingDto[]>([]);
+
+async function onLoad() {
+  rankings.value = await loadPowerRankings();
+}
+</script>
