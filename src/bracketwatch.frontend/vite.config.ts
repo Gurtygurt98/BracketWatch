@@ -10,8 +10,9 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
-  server: {
-    port: 54582,
-    proxy: { '/api': 'http://localhost:3951' },
+  server:{
+    host: '0.0.0.0',
+    port: 5173,                 // match compose
+    proxy: { '/api': 'http://api:8080' } // service name + container port
   },
 });

@@ -34,7 +34,7 @@ namespace BracketWatch.API.Controllers
                 team = new TeamDto
                 {
                     Id = 2,
-                    Name = "Browns"
+                    Name = "Steelers"
                 },
                 rank = 2
             };
