@@ -3,7 +3,7 @@
     <button @click="onLoad">Load Rankings</button>
     <ul>
       <li v-for="r in rankings" :key="r.rank">
-        {{ r.team.name }} <!-- your DTO has team.name -->
+        {{ r.team.name }} 
       </li>
     </ul>
   </div>

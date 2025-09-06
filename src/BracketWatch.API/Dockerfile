@@ -1,4 +1,4 @@
-
+# --- build stage --- 
 FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:9.0-azurelinux3.0 AS build
 WORKDIR /source
 COPY . .
@@ -13,7 +13,7 @@ ENV ASPNETCORE_URLS=http://0.0.0.0:8080 \
     DOTNET_USE_POLLING_FILE_WATCHER=1
 EXPOSE 8080
 CMD ["dotnet","watch","--project","src/BracketWatch.API/BracketWatch.API.csproj","run","--urls","http://0.0.0.0:8080"]
-
+# --- final stage: distroless ---
 FROM mcr.microsoft.com/dotnet/aspnet:9.0.8-azurelinux3.0-distroless-composite AS final
 WORKDIR /app
 ENV ASPNETCORE_URLS=http://0.0.0.0:8080

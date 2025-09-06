@@ -21,8 +21,8 @@ services:
       - ../src/bracketwatch.frontend:/app
       - /app/node_modules
     environment:
-      VITE_HOST: 0.0.0.0
-      CHOKIDAR_USEPOLLING: "1"    # helps on Windows/WSL mounts
+      VITE_HOST: 0.0.0.0E
+      CHOKIDAR_USEPOLLING: "1" 
     command: sh -c "npm ci || npm i && npm run dev -- --host --port 5173"
     ports:
       - "5173:5173"
