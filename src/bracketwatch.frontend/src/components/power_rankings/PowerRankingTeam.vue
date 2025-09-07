@@ -10,14 +10,14 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { loadPowerRankings } from '@/services/powerRankingServices';
+    import { ref } from 'vue';
+    import { loadPowerRankings } from '@/services/powerRankingServices';
 
-import type { PowerRankingDto } from '@/models/ApiClient';
+    import type { PowerRankingDto } from '@/models/PowerRankingDto';
 
-const rankings = ref<PowerRankingDto[]>([]);
+    const rankings = ref<PowerRankingDto[]>([]);
 
-async function onLoad() {
-  rankings.value = await loadPowerRankings();
-}
+    async function onLoad() {
+        rankings.value = await loadPowerRankings();
+    }
 </script>

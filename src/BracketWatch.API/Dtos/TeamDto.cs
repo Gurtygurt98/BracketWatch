@@ -2,7 +2,7 @@
 {
     public class TeamDto
     {
-        public int Id { get; set; }
+        public int Id { get; set; } = -1;
         public string Name { get; set; } = "NAME_ERROR";
         public string Description { get; set; } = "";
         public int Wins { get; set; }
