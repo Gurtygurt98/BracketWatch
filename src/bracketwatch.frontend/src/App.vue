@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import PowerRanking from './components/power_rankings/PowerRankingTeam.vue'
+  import PowerRanking from './components/nfl/power_rankings/PowerRankingTeam.vue'
 </script>
 
 <template>

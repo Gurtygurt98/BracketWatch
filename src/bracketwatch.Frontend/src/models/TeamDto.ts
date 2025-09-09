@@ -1,8 +1,8 @@
 export class TeamDto {
-    Id :  number = -1;
-    Name : string = "NAME_ERROR";  
-    String : string = "";
-    Wins : number = 0;
+    id :  number = -1;
+    name : string = "NAME_ERROR";  
+    string : string = "";
+    wins : number = 0;
     Losses : number = 0;
     PointsFor : number = 0;
     PointsAgainst : number = 0;
