@@ -1,5 +1,8 @@
 <template>
     <div class="bg-white rounded-lg shadow-md p-6 mb-4">
+        <h4 class="text-xl font-semibold text-yellow-900 mb-1">
+            {{ props.RankEntry.rank }}
+        </h4>
         <h4 class="text-xl font-semibold text-gray-900 mb-1">
             {{ props.RankEntry.team.name }}
         </h4>
