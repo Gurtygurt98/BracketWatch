@@ -2,27 +2,24 @@
   "version": "0.2.0",
   "configurations": [
     {
-      // .NET API
-      "name": "C#: VisualViews API Debug",
+      "name": "C#: BracketWatch API Debug",
       "type": "dotnet",
       "request": "launch",
       "projectPath": "${workspaceFolder}/src/BracketWatch.API/BracketWatch.API.csproj"
     },
     {
-      // Vue dev server
       "name": "Vue: NPM Run Dev",
       "type": "node-terminal",
       "request": "launch",
-      "command": "npm run dev -- --config vite.config.debug.ts",
-      "cwd": "${workspaceFolder}/src/bracketwatch.frontend"
+       "command": "npm run dev:debug",
+      "cwd": "${workspaceFolder}/src/bracketwatch.Frontend"
     },
     {
-      // Debug Vue in Firefox (or Chrome if you prefer)
       "name": "Vue: Debug UI (Chrome)",
       "type": "chrome",
       "request": "launch",
       "url": "http://localhost:5173",
-      "webRoot": "${workspaceFolder}/src/bracketwatch.frontend"
+      "webRoot": "${workspaceFolder}/src/bracketwatch.Frontend"
     }
   ],
   "compounds": [

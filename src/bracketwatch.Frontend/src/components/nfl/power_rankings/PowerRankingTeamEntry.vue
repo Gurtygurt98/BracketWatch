@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-white rounded-lg shadow-md p-6 mb-4">
+    <div class="bg-white rounded-lg shadow-md p-6 mb-4 bg-gradient-to-r from-black-200 via-gray-100 to-yellow-200">
         <h4 class="text-xl font-semibold text-yellow-900 mb-1">
             {{ props.RankEntry.rank }}
         </h4>
