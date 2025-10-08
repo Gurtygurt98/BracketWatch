@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import PowerRankingList from './components/nfl/power_rankings/PowerRankingList.vue'
-import logo from '@/assets/logo.svg'
+  import PowerRankingList from './components/nfl/power_rankings/PowerRankingList.vue'
+
 </script>
 
 <template>
-  <main class="bg-blue-500 bg-blend-multiply" :style="{ backgroundImage: `url(${logo})` }">
+  <main class="min-h-dvh bg-gray-400">
     <PowerRankingList />
   </main>
 </template>

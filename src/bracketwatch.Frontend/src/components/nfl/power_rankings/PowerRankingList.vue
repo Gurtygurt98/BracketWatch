@@ -1,6 +1,6 @@
 
 <template>
-  <div class="max-w-4xl mx-auto rounded-xl shadow-lg bg- px-2 py-12 bg-blend-screen bg-gradient-to-b from-yellow-200 via-white to-yellow-200">
+  <div class="max-w-4xl mx-auto rounded-xl shadow-lg px-2 py-12 bg-blend-screen bg-gray-200 ">
     <div v-for="r in rankings" :key="r.rank" >
       <PowerRankingTeamEntry :RankEntry="r" />
     </div>
@@ -19,9 +19,7 @@
 
     async function onLoad() {
         try {
-            console.log('Loading rankings...');
             rankings.value = await loadPowerRankings();
-            console.log('Loaded rankings:', rankings.value);
         } catch (error) {
             console.error('Error loading rankings:', error);
         }

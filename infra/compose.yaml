@@ -1,5 +1,14 @@
+name: bracket_watch_local
 services:
+  bracket_watch_db:
+    container_name: "bracket_watch_db"
+    build:
+      context: .. 
+      dockerfile: src/BracketWatch.Data/db.Dockerfile
+    ports:
+      - "1433:1433"
   api:
+    container_name: "bracket_watch_api"
     build:
       context: .. 
       dockerfile: src/BracketWatch.API/Dockerfile
@@ -14,7 +23,8 @@ services:
     ports:
       - "8877:8080"
 
-  web:
+  bracket_watch_web:
+    container_name: "bracket_watch_web"
     image: node:22-alpine
     working_dir: /app
     volumes:
