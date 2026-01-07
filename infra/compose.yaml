@@ -1,12 +1,11 @@
 name: bracket_watch_local
 services:
   bracket_watch_db:
+    image: postgres:16
+    restart: always
     container_name: "bracket_watch_db"
-    build:
-      context: .. 
-      dockerfile: src/BracketWatch.Data/db.Dockerfile
-    ports:
-      - "1433:1433"
+    environment:
+      POSTGRES_PASSWORD: BracketWatchAdmin76!
   api:
     container_name: "bracket_watch_api"
     build:
@@ -38,6 +37,14 @@ services:
       - "5173:5173"
     depends_on:
       - api
+  adminer:
+    image: adminer
+    container_name: "bracket_watch_adminer"
+    restart: always
+    ports:
+      - "8090:8080"
+    depends_on:
+      - bracket_watch_db
 
 volumes:
   nuget:
