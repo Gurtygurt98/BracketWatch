@@ -1,5 +1,5 @@
 <template>
-    <div class="flex items-center gap-1 sm:gap-2 md:gap-4 p-2 sm:p-2 md:p-4 rounded-lg sm:rounded-xl shadow-lg bg-gradient-to-r from-gray-300 via-[var(--primary-color)] to-[var(--secondary-color)]" 
+    <div class="p-2 cursor-pointer flex items-center gap-1 sm:gap-2 md:gap-4 p-2 sm:p-2 md:p-4 rounded-lg sm:rounded-xl shadow-lg bg-gradient-to-r from-gray-300 via-[var(--primary-color)] to-[var(--secondary-color)]" 
         :style="{ '--primary-color': teamColors.primary, '--secondary-color': teamColors.secondary }">
         <!-- Ranking Badge -->
         <div class="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-lg flex-shrink-0">
